@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&display=swap');
+
+:root {
+    /* Color */
+    --gradiant_color: linear-gradient(to top, #185a9d,#43cea2);
+    --star-color: #F5C857;
+    --title-color: #002455;
+    --text-color: #000;
+    --p-color: #ccc;
+    --wite-color: #ffff;
+
+    --box1-color: #ABE0F0;
+    --box2-color: #7132CA;
+    --box3-color: #08CB00;
+
+    /* Font Size */
+
+    --p-fontSize: 12px;
+    --title-size: 25px;
+    --link-size: 14px;
+    --line-h: 1.5;
+
+    /* ***************** */
+
+    /* Font Weigth */
+
+    --title-wheight: 900;
+    --link-weight:500;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite USA Traditional Guides", sans-serif;
+}
+
+body { background-color: #f5f5f5; }
+
+a { text-decoration: none; }
+
+h1 { color: var(--title-color); }
+h2 { color: var(--title-color); }
+
+
+p { color: #777; line-height: var(--line-h); }
+
+.btn {
+    background: var(--gradiant_color);
+    padding: 14px 28px;
+    border-radius: 50px;
+    color: var(--wite-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background-color: #ffffff68;
+    transform: skewX(-35deg);
+    transition: .5s;
+}
+
+.btn:hover::before {
+    left: 104%;
+}
+
+
+.header .container, .header .right_header, .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+
+/*---------------------- *\
+ * Start Header 
+\* --------------------- */
+
+
+.header  { 
+    width: 100%; height: 4rem;
+    background: var(--wite-color);
+    box-shadow: 1px 2px 20px;
+}
+
+@media (max-width: 785px) {
+    .header .container {
+        gap: 2rem;
+        position: relative;
+        z-index:100;
+    }
+    .btn { padding: 8px 14px; text-align: center; }
+}
+
+.header .container { height: 100%; }
+
+.header .logo {
+    font-family: "Playwrite US Trad Guides", cursive;
+    color: #185a9d;
+}
+
+.header .right_header > a:not(:nth-child(3)) { color: var(--text-color); }
+
+.header .right_header > a {
+    margin-right: 1rem;
+    font-size: var(--link-size);
+    font-weight: var(--link-weight);
+}
+
+.header .right_header > a:last-child {
+    font-size: var(--title-wheight);
+    font-size: 25px;
+}
+
+
+/*---------------------- *\
+ * Start Home
+\* --------------------- */
+
+.home { text-align: center;}
+
+.home .home_image { width: 100%;}
+
+.home .home_image img { width: 100%; }
+
+.home .content p { margin: 2rem 0; }
+
+
+
+/*---------------------- *\
+ * Start card 
+\* --------------------- */
+
+.card .container { margin-bottom: 2rem; }
+
+.card { 
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center; 
+    flex-direction: column;
+}
+
+.card .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card .box .box_item {
+    padding: 20px;
+    max-width: 15em;
+    height: fit-content;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.card .box .box_item p { margin: 1rem 0; }
+
+.card .box .box_item .icon { margin-bottom: 2rem; }
+
+.card .box_item:nth-child(1) .icon i { color: var(--box1-color); }
+.card .box_item:nth-child(2) .icon i { color: var(--box2-color); }
+.card .box_item:nth-child(3) .icon i { color: var(--box3-color); }
+
+.card .box .box_item .icon i { font-size: 2rem; }
+
+
+.card .box_item:hover {
+    box-shadow: 5px 5px 10px #ccc;
+}
+
+
+.card .box_item.active { box-shadow: 5px 5px 10px #ccc; }
+
+.card .card_image { 
+  width: 100%;
+  height: 25rem;
+  overflow: hidden; 
+}
+
+.card .card_image img {
+    width: 100%;
+    mask-image: linear-gradient(to top ,
+     rgba(0, 0, 0, 0) 0%,
+     rgba(0, 0, 0, 1) 30%,
+     rgba(0, 0, 0, 1) 70%,
+     rgba(0, 0, 0, 0) 100%
+     );
+}
+
+
+
+
+/*---------------------- *\
+ * Start card 
+\* --------------------- */
